@@ -1,1 +1,7 @@
-React redux thunk test example
+## Install
+
+yarn
+
+## Running tests
+
+yarn tests
