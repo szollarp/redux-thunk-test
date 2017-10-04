@@ -1,10 +1,11 @@
+import expect from 'expect'
+
 import { 
   FETCH_HTTPDATA_REQUEST,
   FETCH_HTTPDATA_SUCCESS,
   FETCH_HTTPDATA_FAILURE,
   fetchHttpData
 } from './actions'
-
 import HttpDataApp from './reducers'
 
 describe('httpData reducer', () => {
