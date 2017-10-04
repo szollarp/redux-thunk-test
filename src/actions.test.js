@@ -28,7 +28,7 @@ describe('async actions', () => {
       { type: FETCH_HTTPDATA_SUCCESS, body: { url: 'https://httpbin.org/get' } }
     ]
     
-    const store = mockStore({ isLoading: false, body: {}, ex: {} })
+    const store = mockStore({ isLoading: false, body: {}, error: {} })
     return store.dispatch(fetchHttpData()).then(() => {
       // return of async actions
       expect(store.getActions()).toEqual(expectedActions)
