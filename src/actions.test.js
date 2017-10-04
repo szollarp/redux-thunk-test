@@ -24,12 +24,12 @@ describe('async actions', () => {
       .reply(200, { url: 'https://httpbin.org/get' })
 
     const expectedActions = [
-      { type: types.FETCH_HTTPDATA_REQUEST },
-      { type: types.FETCH_HTTPDATA_SUCCESS, body: { url: 'https://httpbin.org/get' } }
+      { type: FETCH_HTTPDATA_REQUEST },
+      { type: FETCH_HTTPDATA_SUCCESS, body: { url: 'https://httpbin.org/get' } }
     ]
     
     const store = mockStore({ isLoading: false, body: {}, ex: {} })
-    return store.dispatch(actions.fetchHttpData()).then(() => {
+    return store.dispatch(fetchHttpData()).then(() => {
       // return of async actions
       expect(store.getActions()).toEqual(expectedActions)
     })
