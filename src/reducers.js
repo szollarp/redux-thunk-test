@@ -27,7 +27,7 @@ const HttpDataApp = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        error: action.ex
+        error: action.error
       }
     default:
       return state
